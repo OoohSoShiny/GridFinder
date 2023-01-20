@@ -1,0 +1,56 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HittigProjectZweitesLehrjahr"
+        xmlns:Drawing="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" x:Class="HittigProjectZweitesLehrjahr.MainWindow"
+        mc:Ignorable="d"
+        Title="Ninja Madness" Height="450" Width="800" MouseRightButtonDown="Window_MouseRightButtonDown"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        ResizeMode="NoResize">
+    <Grid x:Name="MainGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57.143" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="*" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Column="12" Grid.RowSpan="8">
+            <StackPanel Grid.Row="0" Grid.Column="12" Grid.RowSpan="8" Background="Beige" Margin="0">
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="PlaceYingYang" Click="PlaceYingYang_Click" Content="Place End"/>
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="PlaceWall" Click="PlaceWall_Click" Content="Place Wall"/>
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="PlaceTheNinja" Click="PlaceTheNinja_Click" Content="Place Ninja"/>
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="ResetAll" Content="Reset" Click="ResetAll_Click"/>
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="StopNinja" Content="Stop Ninja" Click="StopNinja_Click"/>
+                <Button Height="40" Margin="10" FontSize="16" FontWeight="Bold" x:Name="StartNinja" Content="Start Ninja" Click="StartNinja_Click"/>
+                <Label x:Name="TestLabel" FontSize="20" FontWeight="Bold">TestLabel</Label>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="12" Background="DimGray" Margin="0"/>
+        <StackPanel Grid.Row="0" Grid.RowSpan="8" Background="DimGray" Margin="0"/>
+        <StackPanel Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="12" Background="DimGray" Margin="0"/>
+        <StackPanel Grid.Row="0" Grid.Column="11" Grid.RowSpan="8" Background="DimGray" Margin="0" />
+        <Image x:Name ="NinjaImage" Grid.Row="1" Grid.Column="1"  />
+        <Image x:Name="YinYangImage" Grid.Row="6" Grid.Column="10" />
+    </Grid>
+</Window>
